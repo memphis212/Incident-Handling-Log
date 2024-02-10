@@ -1,5 +1,6 @@
 
 Incident Handling Log
+
 This Python code provides a simple incident handling log application using the Tkinter library for the graphical user interface (GUI). It allows users to log incidents, categorize them, and store relevant information. Below is an overview of the functionalities provided by this application.
 
 Features:
