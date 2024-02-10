@@ -78,9 +78,9 @@ class IncidentLoggerApp:
 
         self.other_label = tk.Label(master, text="Other:")
         self.other_label.grid(row=4, column=0, padx=10, pady=5, sticky="w")
-        self.other_entry = tk.Entry(master)  # Text box for "Other" category
+        self.other_entry = tk.Entry(master)
         self.other_entry.grid(row=4, column=1, padx=10, pady=5, sticky="ew")
-        self.other_entry.grid_remove()  # Hide it initially
+        self.other_entry.grid_remove()y
 
         self.risk_label = tk.Label(master, text="Risk:")
         self.risk_label.grid(row=5, column=0, padx=10, pady=5, sticky="w")
@@ -133,15 +133,12 @@ class IncidentLoggerApp:
         self.log_text = tk.Text(master, height=10, width=50)
         self.log_text.grid(row=14, column=0, columnspan=3, padx=10, pady=10, sticky="nsew")
 
-        # Configure row and column weights to allow resizing
         master.grid_rowconfigure(14, weight=1)
         master.grid_columnconfigure((0, 1), weight=1)
 
-        # Hide the "Other" label and entry initially
         self.other_label.grid_remove()
         self.other_entry.grid_remove()
 
-        # Load existing incidents from CSV file
         self.load_incidents()
 
     def populate_categories(self, *args):
@@ -156,22 +153,22 @@ class IncidentLoggerApp:
     def toggle_other_textbox(self, *args):
         selected_category = self.selected_category.get()
         if selected_category == "Other":
-            self.other_label.grid()  # Show the label for "Other" category
-            self.other_entry.grid()  # Show the text box for "Other" category
+            self.other_label.grid()
+            self.other_entry.grid()
         else:
-            self.other_label.grid_remove()  # Hide the label for "Other" category
-            self.other_entry.grid_remove()  # Hide the text box for "Other" category
+            self.other_label.grid_remove()
+            self.other_entry.grid_remove()
 
     def log_incident(self):
         category = self.selected_category.get()
         if category == "Other":
-            incident_category = self.other_entry.get()  # Use the content of the "Other" text box
+            incident_category = self.other_entry.get()
         else:
             incident_category = category
 
         incident = {
             "Class": self.selected_class.get(),
-            "Category": incident_category,  # Use the content of the "Other" text box if "Other" is selected
+            "Category": incident_category,
             "Date": self.date_completed_entry.get(),
             "Name": self.name_entry.get(),
             "Event Description": self.event_description_entry.get(),
@@ -180,7 +177,7 @@ class IncidentLoggerApp:
             "Date Completed": self.date_completed_entry.get(),
             "Risk": self.selected_risk.get(),
             "SOC Required": self.selected_soc_required.get(),
-            "Additional Notes": self.notes_entry.get()  # Adding additional notes to the incident
+            "Additional Notes": self.notes_entry.get()
         }
         self.incidents.append(incident)
         self.save_incidents()
