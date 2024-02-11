@@ -30,9 +30,9 @@ Click the "About" button to view information about the application and its licen
 Requirements:
 Python 3.x
 Tkinter library (usually included with Python)
-
 CSV Version: No additional library required.
 SQLite Version: SQLite3 library (usually included with Python)
+
 License:
 This application is released under the GNU Public License. For more information, visit https://www.gnu.org/licenses/gpl-3.0.html.
 
