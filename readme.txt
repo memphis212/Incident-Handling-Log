@@ -1,4 +1,3 @@
-
 Incident Handling Log
 
 This Python code provides a simple incident handling log application using the Tkinter library for the graphical user interface (GUI). It allows users to log incidents, categorize them, and store relevant information. Below is an overview of the functionalities provided by this application.
@@ -13,9 +12,10 @@ The application displays logged incidents in a text box, showing incident detail
 Users can search for specific incidents using keywords. The search function matches the entered keyword against incident details and displays matching results.
 
 Data Persistence:
-Incidents are stored in a CSV file named "incidents.csv" upon logging.
-When the application starts, it loads previously logged incidents from the CSV file.
+Incidents are stored either in a CSV file named "incidents.csv" or a SQLite database named "incidents.db", depending on the version you choose.
 
+CSV Version: Incidents are stored in a CSV file upon logging. When the application starts, it loads previously logged incidents from the CSV file.
+SQLite Version: Incidents are stored in a SQLite database upon logging. When the application starts, it loads previously logged incidents from the SQLite database.
 User Interface:
 The GUI is designed using Tkinter, providing a user-friendly interface for logging and viewing incidents.
 Dropdown menus and entry fields enable users to input incident details efficiently.
@@ -30,6 +30,9 @@ Click the "About" button to view information about the application and its licen
 Requirements:
 Python 3.x
 Tkinter library (usually included with Python)
+
+CSV Version: No additional library required.
+SQLite Version: SQLite3 library (usually included with Python)
 License:
 This application is released under the GNU Public License. For more information, visit https://www.gnu.org/licenses/gpl-3.0.html.
 

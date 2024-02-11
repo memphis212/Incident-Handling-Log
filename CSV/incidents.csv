@@ -1,0 +1,2 @@
+Class,Category,Date,Name,Event Description,System(s)/Users Affected,Resolution,Date Completed,Risk,SOC Required,Additional Notes
+High,Unauthorized System Access,02/10/2024,Example Incident,Insider Threat,Bob from accounting,Fired Bob,02/10/2024,High,Yes,Bob has been a problem since we hired him.
